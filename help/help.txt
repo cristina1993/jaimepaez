@@ -1,0 +1,21 @@
+Hace algunas lunas fue liberada la versión 9.2 de PostgreSQL, la cual trae con si mejoras de rendimiento, escalabilidad, soporte nativo para JSON y mucho más. Aquí le dejo el dossier de prensa para quienes no han tenido la oportunidad de leerlo.
+
+Tengo muchos eones que no publico nada relacionado a nuestro motor de bases de datos preferido (Por lo menos en este blog) y a razón de esta eventualidad y la recién liberación de la última versión les comparto estos tips.
+
+Si por alguna razón celestial tenemos nuestro disco duro prácticamente lleno o vamos a mudar nuestro server de base de datos a otro equipo y estamos profundamente interesados en saber el espacio en disco que ocupa nuestra DB o algunas TBL, podemos utilizar algunas de las funciones que el motor PostgreSQL posee.
+
+    pg_relation_size()
+    pg_total_relation_size()
+    pg_database_size()
+
+Para hacer el resultado de las funciones anteriores más fácilmente legible se puede utilizar la función pg_size_pretty().
+
+Primero vamos a determinar el espacio que ocupa nuestra base de datos en disco:
+
+select pg_size_pretty(pg_database_size(‘capacitacion_db’)) as espacio_db;
+
+Con esto ya tenemos es espacio en disco de la DB ahora procedemos a verificar el espacio de una tabla y cabe destacar que incluye el espacio total osea incluyendo el espacio en la tabla pg_toast para objetos grandes, en caso de tenerlos.
+
+select pg_size_pretty(pg_total_relation_size(‘lecturas_full’)) as espacio_tbl;
+
+Con esto ya podemos determinar los espacios que ocupan en disco, en caso de que deseemos hacerlo para varios objetos en una sola ejecución debemos hacer un script y listo.

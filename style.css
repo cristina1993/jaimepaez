@@ -1,0 +1,182 @@
+
+html,body{
+    font-family:Arial; 
+    font-size:13px; 
+    height:95%; 
+}
+
+h2 {
+    font-family: sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0;
+    padding: 15px 0 0 20px;
+}
+a {
+    text-decoration: none;
+    color: #9eb2c0;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+input[type=password]{
+    border: solid 1px #dae4eb;
+    margin: 5px 0 0 5px;
+    padding-left: 10px;	
+}
+input[type=text]{
+    border: solid 1px #dae4eb;
+    margin: 5px 0 0 5px;
+    padding-left: 10px;	
+}
+input[type=email]{
+    border: solid 1px #dae4eb;
+    margin: 5px 0 0 5px;
+    padding-left: 10px;	
+}
+
+input[type=text]::-webkit-input-placeholder { /* WebKit browsers */
+    color: #dae4eb;
+    font-weight: bold;
+}
+input[type=text]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #dae4eb;
+    font-weight: bold;
+}
+input[type=text]::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #dae4eb;
+    font-weight: bold;
+}
+input[type=text]:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #dae4eb;
+    font-weight: bold;
+}
+
+
+
+.container {
+    background-color: #ffffff;
+}
+
+.bar {
+    background-color: #2e3641;
+    text-align: center;
+}
+.bar a {
+    color: #c1cfd9;
+    -webkit-transition: background .2s ease-out;
+    -moz-transition: background .2s ease-out;
+    -o-transition: background .2s ease-out;
+    -ms-transition: background .2s ease-out;
+    transition: background .2s ease-out;
+}
+.bar a:hover {
+    text-decoration: none;
+    background: #242B33;
+}
+.title-bar {
+    height: 55px;
+    text-align: left;
+}
+.more-bar {
+    background-color: #c1cfd9;
+    position: relative; /*To make absolute position in .scroll (Check "Recent Posts" and "Categories")*/
+}
+.btn {
+    display: inline-block;
+    line-height: 35px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #2e3641; 
+    color: #ffffff;
+    text-align: center;
+    cursor:pointer; 
+    border-radius:5px; 
+    -webkit-transition: background .5s ease-out;
+    -moz-transition: background .5s ease-out;
+    -o-transition: background .5s ease-out;
+    -ms-transition: background .5s ease-out;
+    transition: background .5s ease-out;
+}
+.btn:hover {
+    text-decoration: none;
+    background: #666661;
+}
+#left-container{
+    width: 100%;
+}
+
+
+#tags {
+    height: 265px;
+    box-shadow: rgba(0,0,0,0.2) 10px 10px 10px;
+    border:solid  1px black;
+    border-radius:5px; 
+
+}
+#tags input[type=text],#tags input[type=password] ,#tags select {
+    width: 210px;
+    height: 35px;
+}
+#frm_acceso input[type=text],#frm_acceso input[type=email],#frm_acceso textArea{
+    border: solid 1px #dae4eb;
+    margin: 0px 0 0 0px;
+    padding-left: 10px;	
+    width: 250px;
+    font-size:14px; 
+    text-transform:uppercase; 
+}
+#frm_acceso input[type=email]{
+    text-transform:lowercase; 
+}
+
+#frm_set{
+    border-radius:5px; 
+}
+
+#tags .btn {
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+.img_logo{
+    margin-top:20%; 
+}
+#frm_set{
+    background: white;
+    border:solid  1px black;
+    box-shadow: rgba(0,0,0,0.2) 10px 10px 10px;
+    height:250px !important;    
+}                        
+#tikva{
+    position: absolute;
+    bottom:10px; 
+    right:5px; 
+}
+#solicite{
+    font-family: Arial;
+    font-size:16px;  
+    color:brown;
+    padding: 10px; 
+    font-weight:bolder; 
+    text-orientation:upright;
+    transform: rotate(-45deg);
+    text-align:center; 
+    
+}
+.enfasis{
+    font-family: Arial;
+    text-transform: uppercase;
+    font-size: 18px;
+    color:brown;
+    font-weight:bolder; 
+}
+#frm_login table{
+    padding:10px; 
+}
+.foot{
+    padding-top:20px; 
+    font-size:10px; 
+}

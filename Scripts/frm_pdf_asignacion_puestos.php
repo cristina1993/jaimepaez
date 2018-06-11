@@ -1,0 +1,48 @@
+<?php
+session_start();
+include_once '../Includes/permisos.php';
+$sem = $_REQUEST['id'];
+$gr = $_REQUEST['gr'];
+$div = $_REQUEST['dv'];
+$y = $_REQUEST['year'];
+?>
+<head>
+    <script>
+        function salir() {
+            mnu = window.parent.frames[0].document.getElementById('lock_menu');
+            mnu.style.visibility = "hidden";
+            grid = window.parent.frames[1].document.getElementById('grid');
+            grid.style.visibility = "hidden";
+            parent.document.getElementById('bottomFrame').src = '';
+            parent.document.getElementById('contenedor2').rows = "*,0%";
+        }
+
+    </script>
+    <style>
+        html,body{
+            height:100%; 
+            overflow:hidden;
+        }
+        iframe{
+            height:87%!important;
+        }
+        form{
+            margin-top:-10px;  
+        }
+        .cerrar{
+            color:white; 
+            cursor:pointer; 
+        }
+    </style>
+</head>
+<body>
+    <table style="width:100% ">
+        <thead>
+        <th>
+            <font class="cerrar"  onclick="salir()" title="Salir del Formulario">&#X00d7;</font>  
+        </th>
+    </thead>
+
+</table>   
+<iframe  src='../Reports/pdfPuestosTrabajo.php?ger=<?php echo $gr ?>&div=<?php echo $div ?>&id=<?php echo $sem ?>&year=<?php echo $y ?>' width="100%" />           
+</body>

@@ -1,0 +1,10 @@
+6;"factura asiento cliente";1168;""
+7;"factura asiento descuento";1105;""
+8;"factura asiento iva";1215;""
+9;"factura asiento ice";3;""
+10;"factura asiento irbprn";4;""
+11;"factura asiento ventas";1404;""
+12;"factura asiento propina";5;""
+
+
+

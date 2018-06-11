@@ -1,0 +1,352 @@
+/* CSS Document */
+DIV.calendar
+{
+    POSITION: relative;
+}
+.calendar
+{
+    border: solid 1px #7baada;
+    FONT-SIZE: 11px;
+    BACKGROUND: #616975;
+    CURSOR: default;
+    COLOR: #000;
+    FONT-FAMILY: tahoma,verdana,sans-serif;
+-webkit-box-shadow: 4px 4px 8px rgba(12, 42, 97, 0.67);
+-moz-box-shadow:    4px 4px 8px rgba(12, 42, 97, 0.67);
+box-shadow:         4px 4px 8px rgba(12, 42, 97, 0.67);
+}
+.calendar TABLE
+{
+    BORDER-RIGHT: #565 1px solid;
+    BORDER-TOP: #565 1px solid;
+    FONT-SIZE: 11px;
+    BACKGROUND: white;
+    BORDER-LEFT: #565 1px solid;
+    CURSOR: default;
+    COLOR: #000;
+    BORDER-BOTTOM: #565 1px solid;
+    FONT-FAMILY: tahoma,verdana,sans-serif
+}
+.calendar .button
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    FONT-SIZE: 90%;
+    background:#616975; 
+    PADDING-BOTTOM: 2px;
+    COLOR: #fff;
+    PADDING-TOP: 2px;
+    TEXT-ALIGN: center;
+    border:solid 1px #ccc; 
+}
+.calendar .nav
+{
+    BACKGROUND: url(menuarrow.gif) #616975 no-repeat 100% 100%
+}
+.calendar THEAD .title  /*Mes y Año*/
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    FONT-WEIGHT: bold;
+    BACKGROUND: #616975;
+    PADDING-BOTTOM: 2px;
+    COLOR: #fff;
+    PADDING-TOP: 2px;
+    TEXT-ALIGN: center;
+    border: solid 1px #ccc;
+    
+}
+.calendar THEAD .headrow
+{
+    background:#616975; 
+}
+.calendar THEAD .name
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    PADDING-BOTTOM: 2px;
+    COLOR: #000;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: #565 1px solid;
+    TEXT-ALIGN: center
+}
+.calendar THEAD .weekend
+{
+    COLOR: #a66
+}
+.calendar THEAD .hilite
+{
+    BORDER-RIGHT: #084 1px solid;
+    PADDING-RIGHT: 1px;
+    BORDER-TOP: #084 1px solid;
+    PADDING-LEFT: 1px;
+    PADDING-BOTTOM: 1px;
+    BORDER-LEFT: #084 1px solid;
+    COLOR: #000;
+    PADDING-TOP: 1px;
+    BORDER-BOTTOM: #084 1px solid;
+    background-color:#616975; 
+}
+.calendar THEAD .active
+{
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 2px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 2px;
+    BACKGROUND-COLOR: #7c7
+}
+.calendar THEAD .daynames
+{
+    BACKGROUND: #616975
+}
+.calendar TBODY .day
+{
+    PADDING-RIGHT: 4px;
+    PADDING-LEFT: 2px;
+    PADDING-BOTTOM: 2px;
+    WIDTH: 2em;
+    COLOR: #616975;
+    PADDING-TOP: 2px;
+    TEXT-ALIGN: right
+}
+.calendar TBODY .othermonth
+{
+    FONT-SIZE: 80%;
+    COLOR: #bbb
+}
+.calendar TBODY .oweekend
+{
+    COLOR: #fbb
+}
+.calendar TABLE .wn /*Columa de semanas*/
+{
+    BORDER-RIGHT: #8a8 1px solid;
+    PADDING-RIGHT: 3px;
+    PADDING-LEFT: 2px;
+    BACKGROUND: #616975;
+    PADDING-BOTTOM: 2px;
+    PADDING-TOP: 2px;
+    color:white; 
+        
+}
+.calendar TBODY .rowhilite TD
+{
+    BACKGROUND: #11658d;
+    color:#fff;     
+}
+.calendar TBODY .rowhilite TD.wn
+{
+    background:#7baada; 
+}
+.calendar TBODY TD.hilite
+{
+    BORDER-RIGHT: #bbb 1px solid;
+    PADDING-RIGHT: 3px;
+    BORDER-TOP: #bbb 1px solid;
+ PADDING-LEFT: 1px;
+    background:#7baada; 
+    PADDING-BOTTOM: 1px;
+    BORDER-LEFT: #bbb 1px solid;
+    PADDING-TOP: 1px;
+    BORDER-BOTTOM: #bbb 1px solid
+}
+.calendar TBODY TD.active
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    BACKGROUND: #dec;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 2px
+}
+.calendar TBODY TD.selected
+{
+    FONT-WEIGHT: bold;
+    COLOR: #11658d;
+    background:#E6F8FF; 
+    border: solid 1px #11658d;
+}
+.calendar TBODY TD.weekend
+{
+    COLOR: #a66
+}
+.calendar TBODY TD.today
+{
+    FONT-WEIGHT: bold;
+    color:#11658d; 
+    background:#fff; 
+}
+.calendar TBODY .disabled
+{
+    COLOR: #999
+}
+.calendar TBODY .emptycell
+{
+    VISIBILITY: hidden
+}
+.calendar TBODY .emptyrow
+{
+    DISPLAY: none
+}
+.calendar TFOOT .footrow
+{
+    BACKGROUND: #565;
+    COLOR: #fff;
+    TEXT-ALIGN: center
+}
+.calendar TFOOT .ttip
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    BACKGROUND: #616975;
+    PADDING-BOTTOM: 2px;
+    COLOR: #fff;
+    PADDING-TOP: 2px
+}
+.calendar TFOOT .hilite
+{
+    BORDER-RIGHT: #084 1px solid;
+    PADDING-RIGHT: 1px;
+    BORDER-TOP: #084 1px solid;
+    PADDING-LEFT: 1px;
+    BACKGROUND: #afa;
+    PADDING-BOTTOM: 1px;
+    BORDER-LEFT: #084 1px solid;
+    COLOR: #000;
+    PADDING-TOP: 1px;
+    BORDER-BOTTOM: #084 1px solid
+}
+.calendar TFOOT .active
+{
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 2px;
+    BACKGROUND: #7c7;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 2px
+}
+.calendar .combo
+{
+    BORDER-RIGHT: #565 1px solid;
+    BORDER-TOP: #565 1px solid;
+    DISPLAY: none;
+    FONT-SIZE: 90%;
+    Z-INDEX: 100;
+    background:#7baada; 
+    LEFT: 0px;
+    BORDER-LEFT: #565 1px solid;
+    WIDTH: 4em;
+    CURSOR: default;
+    COLOR: #fff;
+    BORDER-BOTTOM: #565 1px solid;
+    POSITION: absolute;
+    TOP: 0px
+}
+.calendar .combo .label
+{
+    PADDING-RIGHT: 1px;
+    PADDING-LEFT: 1px;
+    PADDING-BOTTOM: 1px;
+    PADDING-TOP: 1px;
+    TEXT-ALIGN: center
+}
+.calendar .combo .label-IEfix
+{
+    PADDING-RIGHT: 1px;
+    PADDING-LEFT: 1px;
+    PADDING-BOTTOM: 1px;
+    PADDING-TOP: 1px;
+    TEXT-ALIGN: center
+}
+.calendar .combo .label-IEfix
+{
+    WIDTH: 4em
+}
+.calendar .combo .hilite
+{
+    background:#63b8ff; 
+}
+.calendar .combo .active
+{
+    BORDER-TOP: #6a4 1px solid;
+    FONT-WEIGHT: bold;
+    background:#7baada; 
+    BORDER-BOTTOM: #6a4 1px solid
+}
+.calendar TD.time
+{
+    PADDING-RIGHT: 0px;
+    BORDER-TOP: #8a8 1px solid;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 1px;
+    PADDING-TOP: 1px;
+    BACKGROUND-COLOR: #dfb;
+    TEXT-ALIGN: center
+}
+.calendar TD.time .hour
+{
+    BORDER-RIGHT: #898 1px solid;
+    PADDING-RIGHT: 3px;
+    BORDER-TOP: #898 1px solid;
+    PADDING-LEFT: 4px;
+    FONT-WEIGHT: bold;
+    PADDING-BOTTOM: 0px;
+    BORDER-LEFT: #898 1px solid;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: #898 1px solid;
+    BACKGROUND-COLOR: #fff
+}
+.calendar TD.time .minute
+{
+    BORDER-RIGHT: #898 1px solid;
+    PADDING-RIGHT: 3px;
+    BORDER-TOP: #898 1px solid;
+    PADDING-LEFT: 4px;
+    FONT-WEIGHT: bold;
+    PADDING-BOTTOM: 0px;
+    BORDER-LEFT: #898 1px solid;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: #898 1px solid;
+    BACKGROUND-COLOR: #fff
+}
+.calendar TD.time .ampm
+{
+    BORDER-RIGHT: #898 1px solid;
+    PADDING-RIGHT: 3px;
+    BORDER-TOP: #898 1px solid;
+    PADDING-LEFT: 4px;
+    FONT-WEIGHT: bold;
+    PADDING-BOTTOM: 0px;
+    BORDER-LEFT: #898 1px solid;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: #898 1px solid;
+    BACKGROUND-COLOR: #fff
+}
+.calendar TD.time .ampm
+{
+    TEXT-ALIGN: center
+}
+.calendar TD.time .colon
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 3px;
+    FONT-WEIGHT: bold;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px
+}
+.calendar TD.time SPAN.hilite
+{
+    BORDER-LEFT-COLOR: #000;
+    BORDER-BOTTOM-COLOR: #000;
+    COLOR: #fff;
+    BORDER-TOP-COLOR: #000;
+    BACKGROUND-COLOR: #686;
+    BORDER-RIGHT-COLOR: #000
+}
+.calendar TD.time SPAN.active
+{
+    BORDER-LEFT-COLOR: #f00;
+    BORDER-BOTTOM-COLOR: #f00;
+    COLOR: #0f0;
+    BORDER-TOP-COLOR: #f00;
+    BACKGROUND-COLOR: #000;
+    BORDER-RIGHT-COLOR: #f00
+}

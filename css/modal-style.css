@@ -1,0 +1,64 @@
+#fallr-overlay{ /*Velo pantalla de bloqueo*/
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #333;
+    height: 100%;
+    width: 100%;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+#fallr-wrapper { /*Estilo de Iframe*/
+    position: fixed;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0 1px 10px #333;
+    -moz-box-shadow: 0 1px 10px #333;
+    -webkit-box-shadow: 0 1px 10px #333;
+    box-shadow: 0 1px 10px rgba(32, 32, 32, 0.5);
+    -moz-box-shadow: 0 1px 10px rgba(32, 32, 32, 0.5);
+    -webkit-box-shadow: 0 1px 10px rgba(32, 32, 32, 0.5);
+}
+#fallr-button-button1{
+    color:white;
+    position:absolute;
+    top:1px;
+    right:1px; 
+padding: 4px 10px;  
+    text-align:center;
+    text-decoration:none; 
+    font-weight:bolder; 
+    font-size:14px;
+    border-radius:2px; 
+    background: #f0b7a1; /* Old browsers */
+    background: -moz-linear-gradient(top, #f0b7a1 0%, #8c3310 50%, #752201 51%, #bf6e4e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0b7a1), color-stop(50%,#8c3310), color-stop(51%,#752201), color-stop(100%,#bf6e4e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f0b7a1 0%,#8c3310 50%,#752201 51%,#bf6e4e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f0b7a1 0%,#8c3310 50%,#752201 51%,#bf6e4e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f0b7a1 0%,#8c3310 50%,#752201 51%,#bf6e4e 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #f0b7a1 0%,#8c3310 50%,#752201 51%,#bf6e4e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#bf6e4e',GradientType=0 ); /* IE6-9 */
+}
+
+ #fallr-button-button1:hover{
+    background:#8c3310;  
+}
+#titulo_ventana{
+  position:absolute; 
+  width:100%; 
+  text-align:center; 
+    padding: 5px;  
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #63b8ff), color-stop(1, #00529B) );
+    background:-moz-linear-gradient( center top, #63b8ff 5%, #00529B 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ff', endColorstr='#00529B');
+    color:#FFFFFF; 
+    font-size: 12px; 
+    font-weight: bold; 
+    border-left: 1px solid #f8f8f8;
+    border-collapse: collapse;
+    cursor:pointer; 
+}

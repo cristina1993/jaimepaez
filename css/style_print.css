@@ -1,0 +1,22 @@
+*{
+    font-size:11px !important;
+    color:black !important; 
+    background:white !important;
+    font-weight:bold !important; 
+}
+table tr td {
+    border:solid 1px #ccc !important; 
+}
+table thead tr th {
+    background:#ccc !important; 
+    border:solid 1px #ccc  !important; 
+    color:black !important;
+    font-weight:bolder !important; 
+}
+.options,img,button{
+    display:none !important; 
+}
+input,select{
+    border:none !important; 
+        font-weight:bold !important; 
+}

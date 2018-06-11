@@ -471,6 +471,7 @@ if (isset($_GET[id])) {
                         $('#cli_ciudad').val('');
                         $('#cli_pais').val('');
                         $('#cli_id').val('0');
+                        $('#cli_tipof').val('');
                     }
                 });
             }
@@ -491,6 +492,7 @@ if (isset($_GET[id])) {
                         $('#cli_ciudad').val('');
                         $('#cli_pais').val('');
                         $('#cli_id').val('0');
+                        $('#cli_tipof').val('');
                     } else {
                         dat = dt.split('&');
                         if (dat[10] == 1 || dat[10] == 2) {
@@ -505,6 +507,7 @@ if (isset($_GET[id])) {
                             $('#cli_ciudad').val('');
                             $('#cli_pais').val('');
                             $('#cli_id').val('0');
+                            $('#cli_tipof').val('');
                         } else {
                             $('#identificacion').val(dat[0]);
                             $('#nombre').val(dat[1]);
@@ -515,6 +518,7 @@ if (isset($_GET[id])) {
                             $('#cli_ciudad').val(dat[6]);
                             $('#cli_pais').val(dat[7]);
                             $('#cli_id').val(dat[8]);
+                            $('#cli_tipof').val(dat[11]);
                         }
                     }
                     $('#con_clientes').hide();
@@ -819,6 +823,7 @@ if (isset($_GET[id])) {
                         $('#pro_aux' + j).val(dat[0]);
                         $('#pro_ids' + j).val(dat[14]);
                         $('#cantidad' + j).val('');
+                        $('#direccion' + j).val(dat[15]);
 
                         if (dat[9] == '') {
                             $('#unidad' + j).val('');
@@ -876,6 +881,7 @@ if (isset($_GET[id])) {
                     } else {
                         $('#pro_descripcion' + j).val('');
                         $('#pro_referencia' + j).val('');
+                        $('#direccion' + j).val('');
                         $('#cantidad' + j).val('');
                         $('#iva' + j).val('0');
                         $('#pro_aux' + j).val('');
@@ -1318,7 +1324,13 @@ if (isset($_GET[id])) {
                             <tr>
                                 <td>PAIS:</td>
                                 <td><input type="text"  size="45"  id="cli_pais"  value="<?php echo $rst[cli_pais] ?>"  onblur="this.value = this.value.toUpperCase()"/></td>
-                            </tr></table></td>
+                            </tr>
+                            <tr>
+                                <td>TIPO:</td>
+                                <td><input type="text"  size="45"  id="cli_tipof"  value="<?php echo $rst[cli_tiempo_residencia] ?>"  onblur="this.value = this.value.toUpperCase()"/></td>
+                            </tr>
+                        </table>
+                    </td>
                     <td valign="top">
                         <table id='tbl_colum3' border="0" cellspacing="0" cellpadding="0" >
                             <td class="trthead" colspan="6" align='center' style="background:#00557F ;color:white " >
@@ -1692,6 +1704,7 @@ if (isset($_GET[id])) {
                                     <th>CODIGO</th>
                                     <th>DESCRIPCION</th>
                                     <th>UNIDAD</th>
+                                    <th>DIRECCION</th>
                                     <th <?php echo $hidden ?>>INVENTARIO</th>
                                     <th>CANTIDAD</th>
                                     <th>PRECIO</th>
@@ -1726,6 +1739,7 @@ if (isset($_GET[id])) {
                                             <input type="hidden"  id="mov_cost_tot1"  lang="1" />
                                         </td>
                                         <td><input type ="text" size="7"  id="unidad1"  value="" lang="1" readonly/></td>
+                                        <td><input type ="text" size="7"  id="direccion1"  value="" lang="1" readonly/></td>
                                         <td <?php echo $hidden ?>><input type ="text" size="7"  id="inventario1"  value="" lang="1" readonly <?php echo $hidden ?>/></td>
                                         <td><input type ="text" size="7"  id="cantidad1"  value="" lang="1" onchange="calculo(this), inventario(this), costo(this)" onkeyup="this.value = this.value.replace(/[^0-9.]/, '')"/></td>
                                         <td><input type ="text" size="7"  id="pro_precio1"  onchange="calculo(this)" value="" lang="1" readonly /></td>
@@ -1781,6 +1795,7 @@ if (isset($_GET[id])) {
                                                 <input type="hidden" size="7" id="mov_cost_tot<?PHP echo $n ?>" value="<?php echo str_replace(',', '', number_format($rst2[mov_val_tot], $dec)) ?>" lang="<?PHP echo $n ?>"/>
                                             </td>
                                             <td><input type ="text" size="7"  id="<?php echo 'unidad' . $n ?>"  value="<?PHP echo $rst_prod[mp_q] ?>" lang="<?PHP echo $n ?>" readonly/></td>
+                                            <td><input type ="text" size="7"  id="<?php echo 'direccion' . $n ?>"  value="<?PHP echo $rst_prod[mp_ab] ?>" lang="<?PHP echo $n ?>" readonly/></td>
                                             <td <?php echo $hidden ?>><input type ="text" size="7"  id="<?php echo 'inventario' . $n ?>"  value="<?php echo str_replace(',', '', number_format($inv, $dc)) ?>" lang="<?PHP echo $n ?>" readonly/></td>
                                             <td><input type ="text" size="7"  id="<?php echo 'cantidad' . $n ?>"  value="<?php echo str_replace(',', '', number_format($rst_det[dfc_cantidad], $dec)) ?>" lang="<?PHP echo $n ?>" onchange="calculo(this), inventario(this), costo(this)" onkeyup="this.value = this.value.replace(/[^0-9.]/, '')"  /></td>
                                             <td><input type ="text" size="7"  id="<?php echo 'pro_precio' . $n ?>"  value="<?php echo str_replace(',', '', number_format($rst_det[dfc_precio_unit], $dec)) ?>" lang="<?PHP echo $n ?>" onchange="calculo(this)" readonly /></td>
@@ -1822,7 +1837,7 @@ if (isset($_GET[id])) {
                                 </tr>
                                 <tr>
 
-                                    <td valign="top" rowspan="11" colspan="7"><textarea id="observacion" style="width:100%; text-transform: uppercase;" onkeydown="return enter(event)"><?php echo $rst[fac_observaciones] ?></textarea></td>    
+                                    <td valign="top" rowspan="11" colspan="8"><textarea id="observacion" style="width:100%; text-transform: uppercase;" onkeydown="return enter(event)"><?php echo $rst[fac_observaciones] ?></textarea></td>    
                                     <td colspan="<?php echo $col ?>" align="right">Subtotal 12%:</td>
                                     <td>
                                         <input style="text-align:right" type="text" size="12" id="subtotal12" value="<?php echo str_replace(',', '', number_format($rst['fac_subtotal12'], $dec)) ?>" readonly/>

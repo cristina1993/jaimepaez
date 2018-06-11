@@ -35,7 +35,7 @@ switch ($op) {
             $sms;
             $rst = pg_fetch_array($Set->lista_clientes_codigo($id));
             if (!empty($rst)) {
-                $sms = $rst[cli_ced_ruc] . '&' . $rst[cli_raz_social] . '&' . $rst[cli_calle_prin] . ' ' . $rst[cli_numeracion] . ' ' . $rst[cli_calle_sec] . '&' . $rst[cli_telefono] . '&' . $rst[cli_email] . '&' . $rst[cli_parroquia] . '&' . $rst[cli_canton] . '&' . $rst[cli_pais] . '&' . $rst[cli_id] . '&' . $rst[cli_tipo_cliente] . '&' . $rst[cli_estado];
+                $sms = $rst[cli_ced_ruc] . '&' . $rst[cli_raz_social] . '&' . $rst[cli_calle_prin] . ' ' . $rst[cli_numeracion] . ' ' . $rst[cli_calle_sec] . '&' . $rst[cli_telefono] . '&' . $rst[cli_email] . '&' . $rst[cli_parroquia] . '&' . $rst[cli_canton] . '&' . $rst[cli_pais] . '&' . $rst[cli_id] . '&' . $rst[cli_tipo_cliente] . '&' . $rst[cli_estado]. '&' . $rst[cli_tiempo_residencia];
             }
             echo $sms;
         }
@@ -60,7 +60,7 @@ switch ($op) {
                 $rst2 = pg_fetch_array($Set->lista_costos_mov($rst[id], $fra));
                 $rst2[mov_val_unit] = (($rst2[ingreso] - $rst2[egreso]) / ($rst2[icnt] - $rst2[ecnt]));
             }
-            echo $rst[id] . '&' . $rst[mp_c] . '&' . $rst[mp_d] . '&' . $rst[mp_e] . '&' . $rst_precio[mp_f] . '&' . $rst[mp_g] . '&' . $inv . '&0&' . $rst[mp_h] . '&' . $rst[mp_q] . '&' . $rst2[mov_val_unit] . '&' . $rst[mp_j] . '&' . $rst[mp_k] . '&' . $rst[mp_l] . '&' . $rst[ids];
+            echo $rst[id] . '&' . $rst[mp_c] . '&' . $rst[mp_d] . '&' . $rst[mp_e] . '&' . $rst_precio[mp_f] . '&' . $rst[mp_g] . '&' . $inv . '&0&' . $rst[mp_h] . '&' . $rst[mp_q] . '&' . $rst2[mov_val_unit] . '&' . $rst[mp_j] . '&' . $rst[mp_k] . '&' . $rst[mp_l] . '&' . $rst[ids]. '&' . $rst[mp_ab];
         }
 
         break;
